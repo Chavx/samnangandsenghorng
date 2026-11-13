@@ -833,6 +833,126 @@
                 margin-bottom: 14px;
             }
         }
+    
+
+        /* GOLD TEXT + DARK LUXURY THEME (matched to the supplied reference) */
+        :root {
+            --gold-text: #E8C45E;
+            --gold-bright: #F5D982;
+            --gold-deep: #B88A28;
+            --gold-shadow: rgba(22, 17, 30, 0.72);
+        }
+
+        body {
+            background-color: #171629;
+        }
+
+        .invitation-card {
+            background:
+                linear-gradient(180deg, rgba(39, 34, 76, 0.98) 0%, rgba(54, 51, 70, 0.97) 48%, rgba(82, 76, 64, 0.97) 100%) padding-box,
+                linear-gradient(135deg, #FFF0B5 0%, #B88A28 22%, #F6DE91 48%, #9D711C 72%, #FFF0B5 100%) border-box !important;
+            box-shadow: 0 24px 52px rgba(0,0,0,.48), 0 0 20px rgba(232,196,94,.18), inset 0 0 18px rgba(255,239,183,.08) !important;
+        }
+
+        .invitation-card::before {
+            border-color: var(--gold-text) !important;
+        }
+
+        /* Make all invitation wording gold, with a subtle dark shadow for clarity. */
+        .invitation-card .page,
+        .invitation-card .page * {
+            color: var(--gold-text) !important;
+            text-shadow: 0 1px 2px var(--gold-shadow);
+        }
+
+        .invitation-card .header-title,
+        .invitation-card .formal-title,
+        .invitation-card .agenda-divider,
+        .invitation-card .section-title,
+        .invitation-card .final-page-title,
+        .invitation-card .gallery-heading h3 {
+            color: var(--gold-bright) !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,.78), 0 0 8px rgba(232,196,94,.18) !important;
+        }
+
+        .invitation-card .agenda-divider::before,
+        .invitation-card .agenda-divider::after,
+        .invitation-card .final-page-line {
+            background: linear-gradient(90deg, transparent, var(--gold-deep), var(--gold-bright), var(--gold-deep), transparent) !important;
+        }
+
+        .invitation-card .program-day-title {
+            color: var(--gold-bright) !important;
+            background: rgba(232,196,94,.10) !important;
+            border-left-color: var(--gold-bright) !important;
+        }
+
+        .invitation-card .timeline {
+            border-left-color: rgba(232,196,94,.58) !important;
+        }
+
+        .invitation-card .timeline-item::before {
+            background: var(--gold-bright) !important;
+            box-shadow: 0 0 8px rgba(245,217,130,.55) !important;
+        }
+
+        .invitation-card .guest-name-box {
+            background: linear-gradient(135deg, #8E671D, #F5D982, #A87920) !important;
+            box-shadow: 0 6px 18px rgba(0,0,0,.35) !important;
+        }
+
+        .invitation-card .guest-name-inner {
+            background: rgba(38, 33, 60, .94) !important;
+            color: var(--gold-bright) !important;
+        }
+
+        .invitation-card .wax-seal-btn {
+            background: radial-gradient(circle, #F8E6A4 0%, #D7B34F 48%, #75521A 100%) !important;
+            border-color: #F5D982 !important;
+        }
+
+        .invitation-card .wax-seal-btn span {
+            color: #352844 !important;
+            text-shadow: none !important;
+        }
+
+        .invitation-card .btn {
+            color: #332744 !important;
+            background: linear-gradient(135deg, #F5D982, #C99C35 58%, #F0D477) !important;
+            border: 1px solid #F7E6A5 !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,.28) !important;
+            text-shadow: none !important;
+        }
+
+        .invitation-card .btn-secondary {
+            color: var(--gold-bright) !important;
+            background: rgba(39, 34, 64, .72) !important;
+            border: 1.5px solid var(--gold-text) !important;
+        }
+
+        .invitation-card .photo-frame,
+        .invitation-card .bio-side,
+        .invitation-card .section-box,
+        .invitation-card .gallery-heading,
+        .invitation-card .location-card-final,
+        .invitation-card .map-qr-frame {
+            border-color: rgba(232,196,94,.58) !important;
+        }
+
+        .invitation-card .bio-side,
+        .invitation-card .section-box,
+        .invitation-card .gallery-heading {
+            background: rgba(38, 33, 60, .55) !important;
+        }
+
+        .invitation-card #page1 {
+            background: linear-gradient(rgba(39, 34, 76, .86), rgba(75, 69, 60, .90)), url('backgrund/IMG_0987.jpg') center / cover no-repeat !important;
+        }
+
+        .invitation-card .page::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--gold-bright), var(--gold-deep)) !important;
+        }
+
     </style>
 </head>
 <body>
@@ -882,7 +1002,7 @@
                 <div class="wedding-date-front" data-i18n="p1_date" style="margin-top: 1rem;">
                     ថ្ងៃសៅរ៍ ២រោច ខែមិគសិរ ឆ្នាំមមី អដ្ឋស័ក ពុទ្ធសករាជ ២៥៧០ <div></div>ត្រូវនឹងថ្ងៃទី២៦ ខែធ្នូ ឆ្នាំ២០២៦ • ម៉ោង ០៥:០០ ល្ងាច
                     <div>នៅ ភោជនីយដ្ឋាន ពន្លឺឋានសួគ៌ថ្មី (អគារ A) ខេត្តសៀមរាប</div>
-                    <div class="venue-name-en">New Heavenly Light Restaurant, Building A, Siem Reap</div>
+                   
                 </div>
             </div>
         </div>
@@ -925,7 +1045,7 @@
                         <span data-i18n="p2_loc_prefix">ដែលនឹងប្រព្រឹត្តទៅនៅ</span><br>
                         <span class="highlight-date-formal" data-i18n="p2_date">ថ្ងៃសៅរ៍ ២រោច ខែមិគសិរ ឆ្នាំមមី អដ្ឋស័ក ពុទ្ធសករាជ ២៥៧០ <div></div>ត្រូវនឹងថ្ងៃទី២៦ ខែធ្នូ ឆ្នាំ២០២៦ • ម៉ោង ០៥:០០ ល្ងាច</span><br>
                         <span data-i18n="p2_loc_text">ស្ថិតនៅ </span>
-                        <a href="https://www.google.com/maps/search/?api=1&amp;query=New%20Heavenly%20Light%20Restaurant%2C%20Building%20A%2C%20Siem%20Reap%2C%20Cambodia" target="_blank" rel="noopener" style="color: #2A1B3D; font-weight: 700; text-decoration: underline;" data-i18n="p2_venue">ភោជនីយដ្ឋាន ពន្លឺឋានសួគ៌ថ្មី (អគារ A) ខេត្តសៀមរាប <div></div>(New Heavenly Light Restaurant, Building A, Siem Reap)</a>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=New%20Heavenly%20Light%20Restaurant%2C%20Building%20A%2C%20Siem%20Reap%2C%20Cambodia" target="_blank" rel="noopener" style="color: #2A1B3D; font-weight: 700; text-decoration: underline;" data-i18n="p2_venue">ភោជនីយដ្ឋាន ពន្លឺឋានសួគ៌ថ្មី (អគារ A) ខេត្តសៀមរាប <div></div></a>
                     </p>
                 </div>
 
@@ -993,12 +1113,12 @@
             <div class="couple-bio-block">
                 <div class="bio-side">
                     <img src="backgrund/IMG_1086.jpg" alt="Groom">
-                    <h3 data-i18n="groom_name">អៀម សំណាង<br><small style="font-family:'Playfair Display',serif;font-size:.7rem;letter-spacing:1px;">Samnang</small></h3>
+                    <h3 data-i18n="groom_name">អៀម សំណាង</h3>
                     <p data-i18n="groom_label">កូនកំលោះ</p>
                 </div>
                 <div class="bio-side">
                     <img src="/backgrund/NZ8_5761.jpg" alt="Bride">
-                    <h3 data-i18n="bride_name">ស្រី សេងហ៊ង<br><small style="font-family:'Playfair Display',serif;font-size:.7rem;letter-spacing:1px;">Senghorng</small></h3>
+                    <h3 data-i18n="bride_name">ស្រី សេងហ៊ង</h3>
                     <p data-i18n="bride_label">កូនក្រមុំ</p>
                 </div>
             </div>
@@ -1053,7 +1173,7 @@
                     <div class="location-text-final">
                         <div class="location-label-final">ទីតាំងកម្មវិធី</div>
                         <div class="location-name-final">ភោជនីយដ្ឋាន ពន្លឺឋានសួគ៌ថ្មី (អគារ A)</div>
-                        <div class="location-name-en-final">New Heavenly Light Restaurant, Building A, Siem Reap</div>
+                      
                         <div class="location-address-final">ខេត្តសៀមរាប • ថ្ងៃសៅរ៍ ទី២៦ ខែធ្នូ ឆ្នាំ២០២៦ • <div></div>ម៉ោង ០៥:០០ ល្ងាច</div>
                     </div>
                 </div>
@@ -1073,7 +1193,7 @@
 
             <div class="section-box wedding-countdown-box" aria-live="polite">
                 <div class="section-title">⏳ រាប់ថយក្រោយដល់ថ្ងៃអាពាហ៍ពិពាហ៍</div>
-                <p class="countdown-subtitle">ពិធីសិរីមង្គល នៅ New Heavenly Light Restaurant, Building A, Siem Reap</p>
+                <p class="countdown-subtitle">ពិធីសិរីមង្គល នៅ ភោជនីយដ្ឋាន ពន្លឺឋានសួគ៌ថ្មី (អគារ A) ខេត្តសៀមរាប</p>
                 <div class="wedding-countdown" id="weddingCountdown">
                     <div class="countdown-unit"><span class="countdown-number" id="countdownDays">--</span><small>ថ្ងៃ</small></div>
                     <div class="countdown-unit"><span class="countdown-number" id="countdownHours">--</span><small>ម៉ោង</small></div>
@@ -1451,6 +1571,357 @@
     line-height: 1.65;
     text-align: center;
 }
+
+
+/* ==========================================================
+   LUXURY NAVY / SMOKE / GOLD THEME — matched to reference
+   Main palette: deep indigo, smoky taupe, antique gold.
+   Content, images, links and existing interactions are kept.
+========================================================== */
+:root {
+    --bg-lavender: #2C275B;
+    --bg-lavender-light: #514B55;
+    --plum-dark: #24213F;
+    --plum-mid: #403B55;
+    --plum-soft: #605658;
+    --gold-accent: #D4AF37;
+    --silver-1: #2C275B;
+    --silver-2: #403B55;
+    --silver-3: #605658;
+    --silver-4: #514B55;
+    --silver-5: #24213F;
+    --silver-6: #B58A27;
+    --silver-7: #1B1930;
+    --primary-gold: #E2BD4D;
+    --dark-gold: #A97C1B;
+    --bg-dark: #292644;
+    --card-bg: rgba(22, 20, 43, 0.42);
+    --border-color: rgba(212, 175, 55, 0.72);
+    --text-light: #EBD58E;
+    --text-gold: #EAC65A;
+    --glow-gold: rgba(212, 175, 55, 0.28);
+    --text-formal: #F0DFAE;
+}
+
+body {
+    background-color: #17191D !important;
+    color: #EBD58E !important;
+}
+
+.bg-media {
+    opacity: 0.22;
+}
+
+.petal {
+    background: linear-gradient(135deg, #FFF1C6, #D4AF37) !important;
+}
+
+body::before {
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(15, 14, 28, 0.18);
+}
+
+/* Main invitation frame and its gold edge */
+.invitation-card {
+    border: 3px solid transparent !important;
+    background:
+        linear-gradient(180deg,
+            #2C275B 0%,
+            #37334F  30%,
+            #605658  65%,
+            #514735 86%,
+            #625D58 100%) padding-box,
+        linear-gradient(135deg,
+            #FFF2C9 0%,
+            #D4AF37 16%,
+            #F0D477 36%,
+            #A97C1B 53%,
+            #E5C45F 72%,
+            #FFF0C2 100%) border-box !important;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.62),
+        0 0 0 1px rgba(255, 242, 201, 0.72),
+        0 0 22px rgba(212, 175, 55, 0.18),
+        inset 0 0 18px rgba(255, 232, 170, 0.08) !important;
+}
+
+.invitation-card::before {
+    border-color: #D4AF37 !important;
+    opacity: 0.72 !important;
+}
+
+.invitation-card::after {
+    opacity: 0.95 !important;
+}
+
+/* Music control */
+.icon-btn {
+    background: rgba(31, 29, 54, 0.92) !important;
+    border-color: #D4AF37 !important;
+    color: #EBD16B !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Cover page */
+#page1 {
+    background:
+        linear-gradient(rgba(40, 36, 78, 0.84), rgba(67, 59, 66, 0.87)),
+        url('backgrund/IMG_0987.jpg') center / cover no-repeat !important;
+}
+
+.header-title,
+.sub-title,
+.guest-label,
+.wedding-date-front,
+.envelope-instruction {
+    color: #EAC65A !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55) !important;
+}
+
+.page1-logo {
+    background: linear-gradient(180deg,
+        #FFF0B8 0%, #D4AF37 25%, #A87919 50%, #EAC65A 75%, #FFF0B8 100%) !important;
+    filter: drop-shadow(0 2px 6px rgba(234, 198, 90, 0.38)) !important;
+}
+
+.wax-seal-btn {
+    background: radial-gradient(circle, #FFF3C9 0%, #E3C35D 32%, #B58A27 67%, #493A28 100%) !important;
+    border-color: #F2D77D !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.42), inset 0 2px 5px rgba(255,255,255,0.68) !important;
+}
+
+.wax-seal-btn span {
+    color: #4A3A20 !important;
+}
+
+.guest-name-box {
+    background: linear-gradient(135deg, #A87919, #F0D477, #A87919) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32) !important;
+}
+
+.guest-name-inner {
+    background: rgba(38, 35, 70, 0.96) !important;
+    color: #F0D477 !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Shared navigation buttons */
+.btn {
+    background: linear-gradient(135deg, #D4AF37, #A87919) !important;
+    color: #292442 !important;
+    border: 1px solid #F0D477 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32) !important;
+}
+
+.btn-secondary {
+    background: rgba(35, 32, 62, 0.82) !important;
+    border: 1.5px solid #D4AF37 !important;
+    color: #F0D477 !important;
+}
+
+/* Formal invitation page — gold lettering on the dark gradient */
+.content-container-formal {
+    color: #F0DFAE !important;
+}
+
+.formal-title,
+.parent-name,
+.invitation-intro,
+.date-location-block-formal,
+.main-couple-name-formal,
+.highlight-date-formal,
+.agenda-divider,
+.couple-name-label,
+.scroll-hint,
+.time-badge {
+    color: #EAC65A !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.44) !important;
+}
+
+.invitation-text,
+.event-name,
+.invitation-card .venue-name-en,
+.invitation-card .location-name-en-final {
+    color: #F1E5C2 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.36) !important;
+}
+
+#page2 a {
+    color: #EAC65A !important;
+}
+
+.agenda-divider::before,
+.agenda-divider::after {
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent) !important;
+}
+
+.program-day-title {
+    color: #F0D477 !important;
+    background: rgba(25, 23, 48, 0.34) !important;
+    border-left-color: #D4AF37 !important;
+}
+
+.timeline {
+    border-left-color: rgba(225, 190, 79, 0.58) !important;
+}
+
+.timeline-item::before {
+    background: #E4BD43 !important;
+    box-shadow: 0 0 7px rgba(228, 189, 67, 0.62) !important;
+}
+
+/* Couple page */
+.photo-frame {
+    border-color: #D4AF37 !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.38) !important;
+}
+
+.bio-side {
+    background: rgba(29, 27, 51, 0.58) !important;
+    border-color: rgba(212, 175, 55, 0.62) !important;
+}
+
+.bio-side img {
+    border-color: #D4AF37 !important;
+}
+
+.bio-side h3,
+.bio-side p,
+.section-title {
+    color: #EAC65A !important;
+}
+
+.section-box {
+    background: rgba(31, 29, 51, 0.58) !important;
+    border-color: rgba(212, 175, 55, 0.58) !important;
+}
+
+/* Gallery heading */
+#page4 .gallery-heading {
+    background: rgba(35, 32, 61, 0.92) !important;
+    border-color: rgba(212, 175, 55, 0.65) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
+}
+
+#page4 .gallery-heading h3 {
+    color: #EAC65A !important;
+}
+
+#page4 .gallery-heading p {
+    color: #F1E5C2 !important;
+}
+
+#page4 .memory-hero .slide {
+    border-color: rgba(212, 175, 55, 0.72) !important;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.38) !important;
+}
+
+/* Location, countdown and gift page */
+#page5 .final-page-kicker,
+#page5 .final-page-title,
+#page5 .final-page-line,
+#page5 .map-qr-caption,
+#page5 .countdown-date-note,
+#page5 .countdown-finished,
+#page5 .digital-gift-box .section-title,
+#page5 .digital-gift-box .gift-note,
+#page5 .location-name-final {
+    color: #EAC65A !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.42) !important;
+}
+
+#page5 .final-page-line::before,
+#page5 .final-page-line::after {
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent) !important;
+}
+
+#page5 .final-page-heading p,
+#page5 .location-address-final,
+#page5 .digital-gift-box .gift-intro,
+#page5 .countdown-subtitle {
+    color: #F1E5C2 !important;
+}
+
+#page5 .location-card-final,
+#page5 .wedding-countdown-box,
+#page5 .digital-gift-box {
+    background: rgba(31, 29, 51, 0.64) !important;
+    border-color: rgba(212, 175, 55, 0.68) !important;
+    box-shadow: 0 9px 23px rgba(0, 0, 0, 0.28) !important;
+}
+
+#page5 .location-pin-final,
+#page5 .countdown-unit {
+    background: linear-gradient(145deg, #D4AF37, #A87919) !important;
+    border-color: #F0D477 !important;
+    color: #292442 !important;
+}
+
+#page5 .location-label-final {
+    color: #EAC65A !important;
+}
+
+#page5 .location-map-btn-final {
+    color: #292442 !important;
+    background: linear-gradient(135deg, #E4C45C, #B58A27) !important;
+    border-color: #F2D77D !important;
+}
+
+#page5 .location-map-btn-final strong,
+#page5 .location-map-btn-final small,
+#page5 .map-btn-arrow {
+    color: #292442 !important;
+}
+
+#page5 .countdown-number {
+    color: #292442 !important;
+}
+
+#page5 .countdown-unit small {
+    color: #3E3421 !important;
+}
+
+#page5 .map-qr-panel {
+    background: rgba(31, 29, 51, 0.50) !important;
+    border-color: rgba(212, 175, 55, 0.6) !important;
+}
+
+/* Keep QR codes on clean white paper for reliable scanning */
+#page5 .map-qr-frame,
+#page5 .digital-gift-box .qr-item.qr-full-card,
+#page5 .digital-gift-box .qr-image-wrapper.qr-full-image {
+    background: #FFFFFF !important;
+}
+
+#page5 .map-qr-frame,
+#page5 .digital-gift-box .qr-item.qr-full-card {
+    border-color: #D4AF37 !important;
+}
+
+#page5 .digital-gift-box .qr-image-wrapper.qr-full-image {
+    border-color: #E6D7A8 !important;
+}
+
+#page5 .section-box[style*="background"] {
+    background: rgba(31, 29, 51, 0.64) !important;
+    border-color: rgba(212, 175, 55, 0.68) !important;
+}
+
+#page5 .section-box div[style*="color"] {
+    color: #F1E5C2 !important;
+}
+
+#page5 .section-box a[style*="background"] {
+    background: linear-gradient(135deg, #E4C45C, #B58A27) !important;
+    color: #292442 !important;
+}
+
+/* Scrollbar in the dark invitation */
+.page::-webkit-scrollbar-thumb {
+    background: #D4AF37 !important;
+}
+
 </style>
 
             <div class="section-box" style="text-align: left; padding: 12px 15px; background: rgba(255,255,255,0.6);">
